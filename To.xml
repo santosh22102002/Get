@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version="2"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:b="http://www.google.com/2005/gml/b"
+xmlns:data="http://www.google.com/2005/gml/data"
+xmlns:expr="http://www.google.com/2005/gml/expr">
+
+<head>
+  <b:include data="blog" name="all-head-content"/>
+  <title><data:blog.pageTitle/></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <b:skin><![CDATA[
+    body{
+      margin:0;
+      background:#0f0f0f;
+      color:#fff;
+      font-family:Arial,sans-serif;
+    }
+    a{color:#3ea6ff;text-decoration:none}
+    header{
+      text-align:center;
+      padding:15px;
+      font-size:22px;
+      font-weight:bold;
+      border-bottom:1px solid #222;
+    }
+    .wrap{
+      max-width:900px;
+      margin:auto;
+      padding:15px;
+    }
+    .post-title{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+    .video iframe{
+      width:100%;
+      height:360px;
+      border:0;
+    }
+    .download{
+      display:block;
+      margin:20px 0;
+      padding:14px;
+      background:#e50914;
+      text-align:center;
+      border-radius:6px;
+      color:#fff;
+      font-weight:bold;
+    }
+  ]]></b:skin>
+</head>
+
+<body>
+
+<header>
+  <data:blog.title/>
+</header>
+
+<div class="wrap">
+
+<b:section id="main" class="main" showaddelement="no">
+  <b:widget id="Blog1" type="Blog">
+    <b:includable id="main">
+      <b:loop values="data:posts" var="post">
+
+        <div class="post-title">
+          <data:post.title/>
+        </div>
+
+        <div class="video">
+          <data:post.body/>
+        </div>
+
+        <a class="download" href="#">
+          Download Video
+        </a>
+
+      </b:loop>
+    </b:includable>
+  </b:widget>
+</b:section>
+
+</div>
+
+</body>
+</html>
