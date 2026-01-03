@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2'
+      xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <meta charset='UTF-8'/>
+  <title><data:blog.pageTitle/></title>
+
+  <b:skin><![CDATA[
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+  ]]></b:skin>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <data:blog.title/>
+  </header>
+
+  <!-- Main Content -->
+  <div class="content">
+    <b:section id="main" showaddelement="yes">
+      <b:widget id="Blog1" type="Blog"/>
+    </b:section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © <data:blog.title/> — All rights reserved
+  </footer>
+
+</body>
+</html>
