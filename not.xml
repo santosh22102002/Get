@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2'
+      xmlns='http://www.w3.org/1999/xhtml'
+      xmlns:b='http://www.google.com/2005/gml/b'
+      xmlns:data='http://www.google.com/2005/gml/data'
+      xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title><data:blog.pageTitle/></title>
+
+  <b:skin><![CDATA[
+
+/* ===== GLOBAL DARK MODE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d0d0d;
+  color: #eaeaea;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== HEADER (APP BAR) ===== */
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #222;
+  z-index: 999;
+}
+
+/* ===== CONTENT AREA ===== */
+.app-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* ===== POST CARD ===== */
+.post {
+  background: #161616;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* REMOVE POST TITLE */
+.post-title,
+h3.post-title,
+.post h3 {
+  display: none !important;
+}
+
+/* REMOVE META */
+.post-meta,
+.post-timestamp,
+.post-author {
+  display: none !important;
+}
+
+/* ===== LINKS & BUTTONS ===== */
+a {
+  color: #00ff8c;
+  text-decoration: none;
+}
+
+button,
+.download-btn {
+  display: block;
+  width: 100%;
+  background: #00c853;
+  color: #000;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+/* ===== REMOVE BLOGGER FOOTER & UI ===== */
+footer,
+.blog-pager,
+.mobile-link-button,
+.footer-outer,
+.footer-cap-bottom,
+.view-web,
+.view-web-version,
+a[href*="view=classic"],
+a[href*="view=desktop"],
+a[href*="blogger.com"],
+.home-link {
+  display: none !important;
+}
+
+/* ===== REMOVE WHITE GAPS ===== */
+body,
+html {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ===== EMBED RESPONSIVE ===== */
+iframe,
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+  ]]></b:skin>
+</head>
+
+<body>
+
+<!-- APP HEADER -->
+<header>
+  <data:blog.title/>
+</header>
+
+<!-- APP CONTENT -->
+<div class="app-container">
+  <b:section id="main" showaddelement="yes">
+    <b:widget id="Blog1" type="Blog"/>
+  </b:section>
+</div>
+
+</body>
+</html>
